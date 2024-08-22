@@ -35,6 +35,7 @@
 #include <signal.h>
 #ifdef __linux__
 #include <sys/ucontext.h>
+#define ucontext ucontext_t
 #endif
 
 //#define DEBUG_SIGNAL
