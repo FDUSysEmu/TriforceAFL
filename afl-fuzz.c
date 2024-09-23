@@ -2320,7 +2320,7 @@ static u8 run_target(char** argv) {
   }
 
   /* treat all non-zero return values from qemu system test as a crash */
-  if(qemu_mode > 1 && WEXITSTATUS(status) != 0) {
+  if(qemu_mode > 1 && WEXITSTATUS(status) != 0 && !WIFSTOPPED(status)) {
     return FAULT_CRASH;
   }
 
